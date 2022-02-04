@@ -1,9 +1,21 @@
-import { filter } from '../src/data.js';
+import { filter } from "../src/data.js";
 
+describe("filter", () => {
+  it("retorna pokemon filtrado cuando le paso un tipo específico", () => {
+    const dataPokemon = [
+      {
+        name: "Bulbasaur",
+        type: "grass",
+      },
+      {
+        name: "Pikachu",
+        type: "electric",
+      },
+    ];
+    const filteredType = "grass";
 
-describe('filter', () => {
-  it('is a function', () => {
-    expect(typeof filter).toBe('function');
+    const actualFilteredPokemon = filter(dataPokemon, filteredType);
+
+    expect(actualFilteredPokemon[0].name).toBe("Bulbasaur");
   });
-
 });
