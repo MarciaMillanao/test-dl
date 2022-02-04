@@ -4,14 +4,9 @@ export const filter = (dataPokemon, type) => {
   });
 };
 
-export const dataOrder = (data, sortBy, sortOrder) => {
-  let orderPokemon = [];
-  const orderData = data.sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
+export const sortData = (data, sortBy, sortOrder) => {
+  let orderPokemon = data.slice(); // puede usarse [..data] también
+  const orderData = orderPokemon.sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
   console.log(orderData);
-  if (sortOrder === "az") {
-    orderPokemon = orderData;
-  } else {
-    orderPokemon = orderData.reverse();
-  }
-  return orderPokemon;
+  return sortOrder === "asc" ? orderData : orderData.reverse();
 };
