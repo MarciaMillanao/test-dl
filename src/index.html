@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <section id="bienvenida">
+      <button id="btn-ingreso"></button>
+    </section>
+    <section id="container_cards">
+      <header>
+          <select id="filters" name="types">
+            <option value="type">Tipo</option>
+            <option value="grass">Grass</option>
+            <option value="poison">Poison</option>
+            <option value="bug">Bug</option>
+            <option value="flying">Flying</option>
+            <option value="steel">Steel</option>
+            <option value="rock">Rock</option>
+            <option value="fighting">Fighting</option>
+            <option value="water">Water</option>
+            <option value="ground">Ground</option>
+            <option value="normal">Normal</option>
+            <option value="fairy">Fairy</option>
+            <option value="psychic">Psychic</option>
+            <option value="ice">Ice</option>
+            <option value="dark">Dark</option>
+            <option value="fire">Fire</option>
+            <option value="steel">Steel</option>
+            <option value="electric">Electric</option>
+          </select>
+          <select id="order" name="order">
+            <option value="order">Order</option>
+            <option value="az">AZ</option>
+            <option value="za">ZA</option>
+          </select>
+        </header>
+        <div id="root"></div>      
+    </section>
+  </main>
+  
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
